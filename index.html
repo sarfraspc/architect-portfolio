@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diya - Architect</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body data-theme="light">
+    <!-- Loading Screen -->
+    <div class="loading" id="loadingScreen">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="navbar-brand">Diya Fathima</a>
+            <div class="nav-links">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <button id="themeToggle" class="btn-icon">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="animate-on-scroll">Designing <span>Tomorrow's</span> Spaces, Today</h1>
+                <p class="animate-on-scroll">Innovative architecture that blends sustainability with modern aesthetics.</p>
+                <a href="#projects" class="btn btn-primary animate-on-scroll">View My Work</a>
+            </div>
+            <div class="hero-image floating">
+                <img src="img/Apple_Memojis.png" alt="Diya Fathima">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">About Me</h2>
+            <div class="about-grid">
+                <div class="about-image">
+                    <div class="image-grid">
+                        <img src="img/PXL_20250331_053355634.jpg" alt="Diya Fathima" class="main-image animate-on-scroll">
+                        <img src="img/steven holl architects studio visit.jpeg" alt="Studio Visit" class="grid-image animate-on-scroll">
+                        <img src="img/Post by @flowersforfrancis · 6 images.jpeg" alt="Inspiration" class="grid-image animate-on-scroll">
+                    </div>
+                </div>
+                <div class="about-text">
+                    <div class="about-statement animate-on-scroll">
+                        <p>Hello! I'm Diya Fathima, a Bachelor of Architecture student with a passion for designing spaces that tell stories. Based in Kerala, India, I am inspired by the region's rich cultural heritage and natural beauty. My journey in architecture is driven by a fascination with how spaces can shape human emotions and experiences, motivating me to create environments that inspire and connect.</p>
+                        <p>As a budding architect, I am eager to blend technical skills with creative vision, crafting designs that are both functional and meaningful.</p>
+                    </div>
+                    <div class="design-philosophy animate-on-scroll">
+                        <h3>My Design Philosophy</h3>
+                        <ul>
+                            <li><i class="fas fa-leaf"></i> Sustainability is a responsibility.</li>
+                            <li><i class="fas fa-lightbulb"></i> Innovation through problem-solving.</li>
+                            <li><i class="fas fa-users"></i> Human-centric design.</li>
+                            <li><i class="fas fa-paint-brush"></i> Beauty in functionality.</li>
+                        </ul>
+                    </div>
+                    <div class="skills animate-on-scroll">
+                        <span class="skill-tag">Sustainable Design</span>
+                        <span class="skill-tag">BIM Management</span>
+                        <span class="skill-tag">Urban Planning</span>
+                        <span class="skill-tag">Parametric Design</span>
+                        <span class="skill-tag">Project Management</span>
+                        <span class="skill-tag">3D Visualization</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Featured Projects</h2>
+            <div class="project-grid">
+                <div class="project-card transform-3d animate-on-scroll">
+                    <img src="img/download.jpeg" alt="Urban Oasis">
+                    <div class="overlay">
+                        <div class="project-info">
+                            <h3>Urban Oasis</h3>
+                            <p>A mixed-use development focusing on community and green spaces.</p>
+                            <a href="#" class="btn btn-light">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card transform-3d animate-on-scroll">
+                    <img src="img/download.jpeg" alt="Coastal Residence">
+                    <div class="overlay">
+                        <div class="project-info">
+                            <h3>Coastal Residence</h3>
+                            <p>A private home designed to embrace its natural seaside surroundings.</p>
+                            <a href="#" class="btn btn-light">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card transform-3d animate-on-scroll">
+                    <img src="img/download.jpeg" alt="Cultural Center">
+                    <div class="overlay">
+                        <div class="project-info">
+                            <h3>Cultural Center</h3>
+                            <p>A modern public space for art, performance, and community engagement.</p>
+                            <a href="#" class="btn btn-light">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3D Model Viewer Section -->
+    <section id="model-viewer-section" class="model-viewer-section">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">3D Model Viewer</h2>
+            <div id="model-viewer" class="model-viewer"></div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Education</h2>
+            <div class="education-grid">
+                <div class="education-card transform-3d animate-on-scroll">
+                    <div class="education-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="education-content">
+                        <h3>Bachelor of Architecture</h3>
+                        <h4>Avani Institute Of Design</h4>
+                        <span class="date">2023 - Ongoing</span>
+                        <p>Affiliated with University of Calicut</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Get in Touch</h2>
+            <div class="contact-form transform-3d animate-on-scroll">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" name="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="https://www.linkedin.com/in/diya-fathima-792b2833a?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B%2B65XHksTQmO%2Fe0ehGlarPg%3D%3D" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/deaaaaey?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="mailto:diyafathimansm@gmail.com" target="_blank" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+                <p>&copy; 2025 Diya Fathima. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
